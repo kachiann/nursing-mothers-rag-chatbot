@@ -20,9 +20,40 @@ HuggingFace, FAISS, and Streamlit.
 
 ## Running Locally
 
-Clone, install requirements, set API keys as environment variable, and run:
+1. Begin by cloning the project repository from GitHub:
 
-`streamlit run rag_chatbot_app.py`
+   `git clone https://github.com/kachiann/nursing-mothers-rag-chatbot.git`
+   
+2. Change your directory to the newly cloned project folder:
+
+   `cd nursing-mothers-rag-chatbot`
+
+3. Ensure you have a Python environment set up. You can create a virtual environment using:
+
+   `python3 -m venv venv`
+
+   `source venv/bin/activate`
+
+   On Windows:
+
+   `venv\Scripts\activate`
+   
+5. Install the necessary packages:
+
+   `pip install -r requirements.txt`
+6. Set Your OpenAI API Key:
+
+   On Mac/Linux:
+   
+   `export OPENAI_API_KEY="sk-...your key here..."`
+
+   On Windows:
+
+   `set OPENAI_API_KEY=sk-...your key here...`
+   
+7. Start the Web App:
+
+  `streamlit run rag_chatbot_app.py`
 
 
 ## Disclaimer
