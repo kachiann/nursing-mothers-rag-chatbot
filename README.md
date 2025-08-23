@@ -41,7 +41,8 @@ HuggingFace, FAISS, and Streamlit.
 5. Install the necessary packages:
 
    `pip install -r requirements.txt`
-6. Set Your OpenAI API Key:
+
+6. Setup your OpenAI API key:
 
    On Mac/Linux:
    
@@ -51,7 +52,7 @@ HuggingFace, FAISS, and Streamlit.
 
    `set OPENAI_API_KEY=sk-...your key here...`
    
-7. Start the Web App:
+8. Start the Web App:
 
   `streamlit run rag_chatbot_app.py`
 
