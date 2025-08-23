@@ -3,9 +3,9 @@ import json
 from langchain.vectorstores import FAISS
 from langchain.embeddings import HuggingFaceEmbeddings
 
-chunk_folder = "data/chunks"
-index_folder = "embeddings"
-os.makedirs(index_folder, exist_ok=True)
+chunk_folder = "/workspaces/nursing-mothers-rag-chatbot/index/data/chunks"
+index_folder = "/workspaces/nursing-mothers-rag-chatbot/index/embeddings"
+'''os.makedirs(index_folder, exist_ok=True)'''
 
 all_chunks = []
 for filename in ["nhs_qa_strings.json", "nwh_qa_strings.json"]:
