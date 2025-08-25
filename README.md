@@ -1,4 +1,4 @@
-# Nursing Mothers RAG Chatbot 🍼
+# Nursing Mothers Chatbot 🍼
 
 A conversational AI app that answers breastfeeding and infant care questions
 by retrieving expert-backed information from authoritative medical sources
