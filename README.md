@@ -91,7 +91,7 @@ Grounded answer → Streamlit UI
 5. Run the app:
 
    ```bash
-   cd nursing-mothers-rag-chatbot
+   cd maternal-health-ai-assistant
    streamlit run rag_chatbot_app_agent.py
    ```
 
