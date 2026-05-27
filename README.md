@@ -1,5 +1,7 @@
 # Maternal Health AI Assistant
 
+**Live app:** [maternal-health-ai-assistant.streamlit.app](https://maternal-health-ai-assistant.streamlit.app/) [1]
+
 An agentic AI application that answers breastfeeding and infant care questions
 by combining retrieval-augmented generation (RAG) over authoritative medical sources
 with live tool-use — querying the USDA FoodData Central API for real-time nutritional

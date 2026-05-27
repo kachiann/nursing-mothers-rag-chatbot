@@ -48,7 +48,7 @@ Retrieved context:
 
 # -- PAGE CONFIG --
 st.set_page_config(
-    page_title="Nursing Mothers Chatbot",
+    page_title="Maternal Health AI Assistant",
     page_icon="🍼",
     layout="centered",
     initial_sidebar_state="expanded",
@@ -58,27 +58,33 @@ accent_color = "#5bc0be"
 
 # -- SIDEBAR --
 with st.sidebar:
-    st.markdown("## 💁‍♀️ About")
+    st.markdown("## 🤱 About")
     st.write(
-        "This friendly AI assistant helps answer breastfeeding, nutrition, and infant care questions with trusted expert guidance. "
-        "All responses are informed by leading health organizations like the AAP and WHO."
+         "Maternal Health AI Assistant is an agentic AI application for breastfeeding and infant care support. "
+        "It combines retrieval-augmented generation over trusted medical sources with live nutrition and guideline tools."
     )
+    st.write("---")
+    st.markdown("### Features")
+    st.markdown("- Agentic tool use")
+    st.markdown("- Medical RAG over AAP, WHO, NHS, and CDC sources")
+    st.markdown("- Live USDA FoodData Central nutrient lookup")
+    st.markdown("- Evidence-based breastfeeding guideline support")
+    st.markdown("- Multi-turn conversational memory")
     st.write("---")
     st.markdown(
-        "**Disclaimer:** This chatbot provides general information, not medical advice. Always consult your healthcare provider for personal concerns."
+        "**Disclaimer:** This application provides general informational support and is not a substitute for professional medical advice. "
+        "Always consult a qualified healthcare provider for personal medical concerns."
     )
-    st.write("---")
-    st.markdown("**Tools available:**")
-    st.markdown("🔬 Live USDA nutrient lookup")
-    st.markdown("📋 WHO/AAP/CDC guideline lookup")
 
 # -- HEADER --
 st.markdown(
-    f"<h1 style='text-align:center;color:{accent_color};font-size:2.5em'>🍼 Nursing Mothers Chatbot</h1>",
+    f"<h1 style='text-align:center;color:{accent_color};font-size:2.5em'>🍼 Maternal Health AI Assistant</h1>",
     unsafe_allow_html=True,
 )
 st.markdown(
-    "<div style='text-align:center;color:#3aafa9;font-size:1.15em;'>Your expert, confidential support for all things nursing and infant care</div><br>",
+    "<div style='text-align:center;color:#3aafa9;font-size:1.12em;'>"
+    "Breastfeeding and infant care support powered by medical RAG, live nutrition lookup, and evidence-based guideline tools"
+    "</div><br>",
     unsafe_allow_html=True,
 )
 
@@ -129,11 +135,11 @@ def get_context(question: str, k: int = 5) -> str:
 # -- CHAT FORM --
 with st.form("chat-form"):
     question = st.text_area(
-        "Type your breastfeeding or infant care question below:",
-        height=80,
-        placeholder="e.g. How often should I breastfeed my newborn?",
+        "Ask about breastfeeding, infant care, nutrition, or maternal health guidance:",
+        height=90,
+        placeholder="e.g. Is salmon good while breastfeeding? How long can expressed milk stay in the fridge? How much calcium is in spinach?",
     )
-    submitted = st.form_submit_button("Ask AI", use_container_width=True)
+    submitted = st.form_submit_button("Ask Assistant", use_container_width=True)
 
 if submitted and question:
     with st.spinner("Retrieving and generating expert answer..."):
@@ -166,6 +172,8 @@ if st.session_state.history:
 
 # -- FOOTER --
 st.markdown(
-    "<br><hr><div style='text-align:center;font-size:0.9em;color:#777;'>Nursing Mothers Chatbot &copy; 2025 | Powered by LangChain, GPT-4o & USDA FoodData Central</div>",
+    "<br><hr><div style='text-align:center;font-size:0.9em;color:#777;'>"
+    "Maternal Health AI Assistant © 2025 | Built with Streamlit, LangChain, GPT-4o, FAISS, HuggingFace, and USDA FoodData Central"
+    "</div>",
     unsafe_allow_html=True,
 )
