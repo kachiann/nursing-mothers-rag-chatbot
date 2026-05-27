@@ -9,7 +9,7 @@ data and a structured evidence-based guideline store (AAP, WHO, NHS, CDC).
 
 Built with LangChain, OpenAI GPT-4o, HuggingFace, FAISS, and Streamlit.
 
-![Interface](ncb.png)
+![Interface](mha.png)
 
 ## Features
 
